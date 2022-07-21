@@ -25,7 +25,7 @@ export const PokemonByNamePage: NextPage<Props> = ({ pokemon }) => {
 		localFavorite.toggleFavorite(pokemon.id);
 		setisInFavorites(!isInFavorites);
 
-		if (!isInFavorites) return;
+		if (isInFavorites) return;
 		confetti({
 			zIndex: 999,
 			particleCount: 100,
